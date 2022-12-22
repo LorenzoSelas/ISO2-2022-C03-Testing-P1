@@ -53,7 +53,7 @@ public class Fecha{
             else 
                 throw new ExcepcionFecha("Siendo el mes " + mes + ", el dia no puede ser mayor de 29 dias.");
         else 
-            if (dia >= 28)
+            if (dia <= 28)
                 return true;
             else
                 throw new ExcepcionFecha("Siendo el mes " + mes + ", el dia no puede ser mayor de 28 dias.");

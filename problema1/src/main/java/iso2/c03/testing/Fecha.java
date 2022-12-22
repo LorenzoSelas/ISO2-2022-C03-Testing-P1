@@ -25,12 +25,12 @@ public class Fecha{
     }
     private boolean comprobarMes(int mes) throws ExcepcionFecha{
         if (mes == 0) 
-			throw new ExcepcionFecha("El mes no puede ser 0.");
-		else if (mes < 0) 
-            throw new ExcepcionFecha("El mes no puede ser negativo.");
+		throw new ExcepcionFecha("El mes no puede ser 0.");
+	else if (mes < 0) 
+        	throw new ExcepcionFecha("El mes no puede ser negativo.");
         else if(mes > 12)
-            throw new ExcepcionFecha("El mes no puede ser mayor que 12.");
-		return true;
+        	throw new ExcepcionFecha("El mes no puede ser mayor que 12.");
+	return true;
     }
     private boolean comprobarDia(int ano,int mes, int dia) throws ExcepcionFecha{
         if (dia == 0)

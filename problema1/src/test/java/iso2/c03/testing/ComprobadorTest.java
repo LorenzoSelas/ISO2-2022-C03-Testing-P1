@@ -1,8 +1,8 @@
 package iso2.c03.testing;
 
 import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.fail;
 import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.fail;
 
 import org.junit.Test;
 import org.junit.runner.JUnitCore;
@@ -53,6 +53,16 @@ public class ComprobadorTest {
             assertTrue(Comprobador.comprobarBisisesto(fecha));
         } catch (Exception e){
             fail("No se esperaba una excepción");
+        }
+    }
+
+    @Test
+    public void comprobarExcepcion(){
+        try {
+            new Fecha(-1, -1, 0);
+        } catch (Exception e){
+            e.getMessage();
+            assertTrue(true);
         }
     }
 
